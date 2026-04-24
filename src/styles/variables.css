@@ -1,0 +1,56 @@
+/*
+  Portfolio Theme Tokens — Reference Only
+  ----------------------------------------
+  These are all defined inside index.html in the :root block.
+  Copy-paste values from here when customising your theme.
+*/
+
+:root {
+  /* ── Backgrounds ── */
+  --bg: #080808;           /* Main page background */
+  --bg2: #0e0e0e;          /* Alternate section background */
+  --surface: #141414;      /* Card / input surfaces */
+  --border: rgba(255,255,255,0.07);  /* Subtle borders */
+
+  /* ── Text ── */
+  --text: #f0ece4;         /* Primary text */
+  --muted: #6b6761;        /* Secondary / muted text */
+
+  /* ── Accents ── */
+  --accent: #c9a96e;       /* Gold — primary brand accent */
+  --accent2: #7c6fff;      /* Purple — secondary glow */
+  --accent3: #ff6b6b;      /* Red — unused, available */
+
+  /* ── Typography ── */
+  --ff-display: 'Cormorant Garamond', serif;
+  --ff-sans: 'Syne', sans-serif;
+  --ff-mono: 'DM Mono', monospace;
+}
+
+/*
+  ── Suggested Alternative Themes ──
+
+  OCEAN DARK
+  --bg: #050d1a;
+  --accent: #38bdf8;
+  --accent2: #0ea5e9;
+
+  FOREST DARK
+  --bg: #050f0a;
+  --accent: #4ade80;
+  --accent2: #22c55e;
+
+  ROSE DARK
+  --bg: #0f0508;
+  --accent: #fb7185;
+  --accent2: #f43f5e;
+
+  LIGHT MODE (invert)
+  --bg: #fafaf8;
+  --bg2: #f4f0e8;
+  --surface: #ede8de;
+  --border: rgba(0,0,0,0.08);
+  --text: #1a1710;
+  --muted: #8a8680;
+  --accent: #b8860b;
+*/

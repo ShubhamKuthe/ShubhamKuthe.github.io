@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham Kuthe - General CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --page: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --line: #d8e1ee;
+      --accent: #176fc2;
+      --accent-soft: #e8f2fc;
+    }
+
+    * { box-sizing: border-box; }
+
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eef4fb 0%, #f7f9fc 100%);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.42;
+      padding: 10px 8px;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      max-width: 210mm;
+      margin: 0 auto;
+      background: var(--page);
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 60px rgba(17, 24, 39, 0.08);
+    }
+
+    .topbar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--accent), #5da4ea);
+    }
+
+    .content {
+      padding: 18px 22px 18px;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.8rem;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .title {
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      max-width: 66ch;
+    }
+
+    .contact {
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      font-size: 0.78rem;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact strong {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+
+    section {
+      padding-top: 12px;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: #fbfdff;
+      padding: 10px 11px;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 4px;
+    }
+
+    .entry-title {
+      margin: 0;
+      font-size: 0.87rem;
+      font-weight: 700;
+    }
+
+    .entry-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .skill-box {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      background: #fbfdff;
+    }
+
+    .skill-box h3 {
+      margin: 0 0 6px;
+      font-size: 0.74rem;
+      color: var(--text);
+    }
+
+    .skill-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.73rem;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+    }
+
+    .project {
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    .project h3 {
+      margin: 0 0 3px;
+      font-size: 0.81rem;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .project a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      .content { padding: 28px 22px 32px; }
+      .header, .grid-two, .skills, .project-list { grid-template-columns: 1fr; }
+      h1 { font-size: 1.8rem; }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .page {
+        max-width: none;
+        width: auto;
+        min-height: auto;
+        border: none;
+        box-shadow: none;
+      }
+
+      .content {
+        padding: 6px 8px 8px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+    <div class="content">
+      <header class="header">
+        <div>
+            <h1>Shubham Kuthe</h1>
+          <p class="title">Aspiring Software Developer</p>
+          <p class="summary">
+            Master's student in Advanced Computer Science with hands-on experience across web, mobile, desktop, and analytics projects, seeking internships and graduate software roles.
+          </p>
+        </div>
+
+        <div class="contact">
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+447823914983">+44 7823 914983</a>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:shubhamkuthe113@gmail.com">shubhamkuthe113@gmail.com</a>
+          </div>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/ShubhamKuthe">github.com/ShubhamKuthe</a>
+          </div>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/Shubhamkuthe">linkedin.com/in/Shubhamkuthe</a>
+          </div>
+          <div>
+            <strong>Location</strong>
+            Liverpool, United Kingdom
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="grid-two">
+          <article class="card">
+            <div class="entry-head">
+              <div>
+                <p class="entry-title">MSc Advanced Computer Science (with Industry)</p>
+                <p class="entry-meta">University of Liverpool, United Kingdom</p>
+              </div>
+              <p class="entry-meta">Expected 2027</p>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Postgraduate</span>
+              <span class="pill">Advanced Computer Science</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="entry-head">
+              <div>
+                <p class="entry-title">Bachelor of Computer Application (BCA)</p>
+                <p class="entry-meta">Bharati Vidyapeeth, Navi Mumbai, India</p>
+              </div>
+              <p class="entry-meta">CGPA 8.10</p>
+            </div>
+            <div class="pill-row">
+              <span class="pill">Undergraduate</span>
+              <span class="pill">Computer Applications</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills">
+          <div class="skill-box">
+            <h3>Languages</h3>
+            <p>JavaScript, Python, Java, C, C#, SQL</p>
+          </div>
+          <div class="skill-box">
+            <h3>Web & App</h3>
+            <p>HTML, CSS, React, React Native, Expo, Node.js, Express, Responsive UI</p>
+          </div>
+          <div class="skill-box">
+            <h3>Data & Tools</h3>
+            <p>Pandas, Streamlit, PostgreSQL, Git, GitHub, Figma, Excel</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="project-list">
+          <article class="project">
+            <h3>HerCycle</h3>
+            <p>React Native health app with cycle prediction and symptom tracking. <a href="https://github.com/ShubhamKuthe/HerCycle">GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h3>HimaTrack</h3>
+            <p>Desktop activity tracker for apps and system processes with real-time insights. <a href="https://github.com/ShubhamKuthe/HimaTrack">GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h3>UK Census Analytics Dashboard</h3>
+            <p>Python and Streamlit dashboard for interactive census data insights. <a href="https://github.com/ShubhamKuthe/UK-Census-Analytics-Dashboard">GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h3>Ecommerce Analytics</h3>
+            <p>Python pipeline for cleaning, processing, and visualizing e-commerce data. <a href="https://github.com/ShubhamKuthe/Ecommerce-Analytics">GitHub</a></p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
