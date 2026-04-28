@@ -1,4 +1,4 @@
-# Portfolio — Jordan Dev
+# Portfolio — Shubham Kuthe
 
 A professional, fully animated single-page portfolio website.
 
@@ -42,21 +42,3 @@ portfolio-project/
     │   └── ProjectCard.html
     └── styles/
         └── variables.css   ← All CSS variables / theme tokens
-```
-
----
-
-## ✏️ Quick Edits
-
-Open `index.html` in any text editor (VS Code recommended) and search for:
-
-| What to change | Search for |
-|---|---|
-| Your name | `Jordan` |
-| Accent colour | `--accent: #c9a96e` |
-| Email | `hello@jordandev.io` |
-| Years experience | `5+` |
-| Project titles | `project-title` |
-| Skills list | `skills-grid` |
-
-See `CUSTOMISE.md` for the full guide.
