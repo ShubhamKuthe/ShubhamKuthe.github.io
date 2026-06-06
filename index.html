@@ -544,7 +544,7 @@
     z-index: 0;
   }
   .resume-preview-wrap::after {
-    content: 'Open full CV';
+    content: 'Live PDF preview';
     position: absolute;
     top: 18px;
     right: 18px;
@@ -572,6 +572,28 @@
     filter: brightness(0.94) saturate(0.9) contrast(1.02);
     transform: perspective(1400px) rotateX(3deg);
     transform-origin: top center;
+  }
+  .resume-preview-frame {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 12px);
+    margin: 22px auto 8px;
+    aspect-ratio: 210 / 297;
+    background: #fff;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+      0 28px 70px rgba(0,0,0,0.38),
+      0 0 0 1px rgba(8,8,8,0.35);
+    overflow: hidden;
+    transform: perspective(1400px) rotateX(3deg);
+    transform-origin: top center;
+  }
+  .resume-preview-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
   }
 
   /* ── Projects ── */
@@ -1302,18 +1324,20 @@
         </p>
         <div class="resume-meta">
           <span class="resume-chip">One-Page PDF</span>
-          <span class="resume-chip">Full CV Preview</span>
+          <span class="resume-chip">Live PDF Preview</span>
           <span class="resume-chip">Current Version</span>
         </div>
         <div class="resume-actions">
           <a href="Shubham-Kuthe-Resume.pdf" download class="btn btn-primary"><span>Download CV</span></a>
-          <a href="Resume.png" target="_blank" rel="noreferrer" class="btn btn-ghost">Open Full CV</a>
+          <a href="Shubham-Kuthe-Resume.pdf" target="_blank" rel="noreferrer" class="btn btn-ghost">Open Full CV</a>
         </div>
       </div>
 
-      <a href="Resume.png" target="_blank" rel="noreferrer" class="resume-preview-wrap reveal-right reveal-delay-2" aria-label="Open full resume preview">
-        <img src="Resume.png" alt="Shubham Kuthe resume preview" class="resume-preview">
-      </a>
+      <div class="resume-preview-wrap reveal-right reveal-delay-2" aria-label="Live resume PDF preview">
+        <div class="resume-preview-frame">
+          <iframe src="Shubham-Kuthe-Resume.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Shubham Kuthe CV preview" loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
